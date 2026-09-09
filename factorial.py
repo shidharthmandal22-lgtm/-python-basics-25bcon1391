@@ -1,11 +1,13 @@
-# Fibonacci Series in Python
+# Factorial of a Number in Python
 
-n = int(input("Enter the number of terms: "))
+num = int(input("Enter a number: "))
 
-a, b = 0, 1
+factorial = 1
 
-print("Fibonacci Series:")
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    for i in range(1, num + 1):
+        factorial *= i
 
-for i in range(n):
-    print(a, end=" ")
-    a, b = b, a + b
+    print("Factorial of", num, "is", factorial)
